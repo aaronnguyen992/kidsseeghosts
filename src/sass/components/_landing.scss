@@ -1,0 +1,31 @@
+$ns: '.landing';
+
+#{$ns} {
+    position: relative;
+
+    &__chaos {
+        position: relative;
+        top: 5%;
+        color: $color-red;
+        font-size: 8rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    &__kids-see-ghosts {
+        position: relative;
+        top: 20%;
+        color: $color-red;
+        font-size: 10rem;
+        text-align: center;
+    }
+
+    &__tracklist {
+        position: relative;
+        top: 40%;
+        left: 40%;
+        color: $color-white;
+        font-size: 4rem;
+        max-width: 50%;
+    }
+}
