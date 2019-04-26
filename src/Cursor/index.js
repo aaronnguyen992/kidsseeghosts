@@ -25,8 +25,6 @@ class Cursor extends React.Component {
         });
     
         this.animateCursor();
-    
-        console.log(cursor);
     }
     
     animateCursor() {
@@ -38,8 +36,8 @@ class Cursor extends React.Component {
                 
                 TweenMax.set(follower, {
                     css: {    
-                    left: posX - 18,
-                    top: posY - 18
+                    left: posX - 75,
+                    top: posY - 75
                     }
                 });
                 
