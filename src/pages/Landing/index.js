@@ -14,20 +14,13 @@ class Landing extends React.Component {
     animateBlur(){
         const album = document.querySelector('.landing__album');
         const maskElement = document.querySelector('#mask1 circle');
-        var upX, upY, mask;
         
-        album.addEventListener("mouseenter", event => {
-            album.addEventListener("mousemove", event => {
-                let upX = event.clientX;
-                let upY = event.clientY;
-                let mask = maskElement;
-                mask.setAttribute("cy", (upY - 60));
-                mask.setAttribute("cx", (upX - 480));
-            })
-        })
-        
-        album.addEventListener("mouseleave", event => {
-            
+        album.addEventListener("mousemove", event => {
+            let upX = event.clientX;
+            let upY = event.clientY;
+            let mask = maskElement;
+            mask.setAttribute("cy", (upY));
+            mask.setAttribute("cx", (upX));
         })
         
     }
@@ -45,7 +38,7 @@ class Landing extends React.Component {
                         <mask id='mask1'>
                             <circle cx='0' cy='0' r='75' fill='#fff' filter='url(#filter2)'/>
                         </mask>
-                        <image className="landing__album--art" xlinkHref="/assets/AlbumCover.jpg" alt="Album Cover" width="100%" height="100%" mask='url(#mask1)' />
+                        <image className="landing__album--art" xlinkHref="/assets/AlbumCover.jpg" alt="Album Cover" width="100%" height="90%" mask='url(#mask1)' />
                     </svg>
                 </div>
                 <div className="landing__tracklist">

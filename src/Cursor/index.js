@@ -31,8 +31,8 @@ class Cursor extends React.Component {
         TweenMax.to({}, 0.016, {
             repeat: -1,
             onRepeat: function() {
-                posX += (mouseX - posX) / 5;
-                posY += (mouseY - posY) / 5;
+                posX += (mouseX - posX);
+                posY += (mouseY - posY);
                 
                 TweenMax.set(follower, {
                     css: {    
