@@ -33,15 +33,15 @@ class Landing extends React.Component {
                     <svg className='landing__album--blur' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' width="100%">
                         <image filter='url(#filter2)' width='100%' height='100%' />
                         <filter id='filter2'>
-                            <feGaussianBlur stdDeviation='5' />
+                            <feGaussianBlur stdDeviation='10' />
                         </filter>
                         <mask id='mask1'>
-                            <circle cx='0' cy='0' r='75' fill='#fff' filter='url(#filter2)'/>
+                            <circle cx='0' cy='0' r='71' fill='#fff' filter='url(#filter2)'/>
                         </mask>
                         <image className="landing__album--art" xlinkHref="/assets/AlbumCover.jpg" alt="Album Cover" width="100%" height="90%" mask='url(#mask1)' />
                     </svg>
                 </div>
-                <div className="landing__tracklist">
+                <div className="tracklist">
                 {
                     tracklist.map((track, i) => (
                         <Tracklist 
@@ -50,7 +50,6 @@ class Landing extends React.Component {
                             spotify={track.spotify}
                             apple={track.apple}
                             tidal={track.tidal}
-                            google={track.google}
                             key={track.title}
                             i={i}
                         />

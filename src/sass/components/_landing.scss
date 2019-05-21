@@ -23,15 +23,6 @@ $ns: '.landing';
         z-index: 5;
     }
 
-    &__tracklist {
-        position: relative;
-        top: 40%;
-        left: 40%;
-        color: $color-white;
-        font-size: 4rem;
-        max-width: 50%;
-        z-index: 5;
-    }
 
     &__album {
         position: absolute;
