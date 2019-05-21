@@ -7,7 +7,7 @@ $ns: '.tracklist';
     color: $color-white;
     font-size: 4rem;
     max-width: 50%;
-    z-index: 5;
+    
 
     &__track-title{
         
@@ -15,6 +15,7 @@ $ns: '.tracklist';
 
     &__track-links{
         display: block;
+        
     }
 
     &__track-spotify{
@@ -32,5 +33,6 @@ $ns: '.tracklist';
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-right: 3px;
+        font-size: 3rem;
     }
 }
