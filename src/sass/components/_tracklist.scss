@@ -1,0 +1,36 @@
+$ns: '.tracklist';
+
+#{$ns} {
+    position: relative;
+    top: 40%;
+    left: 40%;
+    color: $color-white;
+    font-size: 4rem;
+    max-width: 50%;
+    z-index: 5;
+
+    &__track-title{
+        
+    }
+
+    &__track-links{
+        display: block;
+    }
+
+    &__track-spotify{
+        display: inline;
+        margin-right: 3px;
+    }
+
+    &__track-apple{
+        display: inline;
+        margin-right: 3px;
+    }
+
+    &__track-tidal{
+        display: inline;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-right: 3px;
+    }
+}
