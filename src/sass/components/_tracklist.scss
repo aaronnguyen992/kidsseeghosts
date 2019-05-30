@@ -2,11 +2,18 @@ $ns: '.tracklist';
 
 #{$ns} {
     position: relative;
-    top: 40%;
+    top: 35%;
     left: 40%;
     color: $color-white;
     font-size: 4rem;
     max-width: 50%;
+    display: none;
+
+    &.hover {
+        display: block;
+        max-width: 50%;
+        
+    }
     
 
     &__track-title{
@@ -14,7 +21,7 @@ $ns: '.tracklist';
     }
 
     &__track-links{
-        display: block;
+        display: none;
         
     }
 
