@@ -20,8 +20,8 @@ class Cursor extends React.Component {
         follower = document.querySelector('.cursor-follower');
     
         window.addEventListener("mousemove", e => {
-          mouseX = e.pageX;
-          mouseY = e.pageY;
+            mouseX = e.pageX;
+            mouseY = e.pageY;
         });
     
         this.animateCursor();
