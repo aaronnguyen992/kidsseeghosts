@@ -37,10 +37,7 @@ class Landing extends React.Component {
         return (
             <div className="landing">
                 <div className="landing__chaos">混沌</div>
-                <div className="landing__kids-see-ghosts" 
-                     >
-                     KIDS SEE GHOSTS
-                </div>
+                <div className="landing__kids-see-ghosts">KIDS SEE GHOSTS <span className={`landing__sometimes ${didHover}`}>sometimes</span></div>
                 <div className="landing__album">
                     <svg className='landing__album--blur' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' width="100%">
                         <image filter='url(#filter2)' width='100%' height='100%' />

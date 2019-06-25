@@ -3,6 +3,7 @@ $ns: '.landing';
 #{$ns} {
     position: relative;
     height: 100vh;
+    
 
     &__chaos {
         position: relative;
@@ -16,6 +17,7 @@ $ns: '.landing';
 
     &__kids-see-ghosts {
         position: absolute;
+        display: inline-block;
         top: 40%;
         left: 50%;
         color: $color-red;
@@ -23,6 +25,19 @@ $ns: '.landing';
         text-align: center;
         z-index: 5;
         transform: translate(-50%, -50%); 
+    }
+
+    &__sometimes {
+        position: absolute;
+        visibility: hidden;
+        font-size: 3rem;
+        top: 40%;
+        left: 50%;
+        color: rgba($color-white, .25);
+
+        &.hover {
+            visibility: visible;
+        }
     }
 
 
