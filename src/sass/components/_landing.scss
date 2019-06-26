@@ -29,14 +29,15 @@ $ns: '.landing';
 
     &__sometimes {
         position: absolute;
-        visibility: hidden;
+        opacity: 0;
         font-size: 3rem;
         top: 40%;
         left: 50%;
         color: rgba($color-white, .25);
+        transition: all .6s;
 
         &.hover {
-            visibility: visible;
+            opacity: 1;
         }
     }
 
