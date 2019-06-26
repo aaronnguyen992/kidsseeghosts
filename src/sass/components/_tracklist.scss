@@ -6,11 +6,12 @@ $ns: '.tracklist';
     left: 50%;
     color: $color-white;
     font-size: 4rem;
-    display: none;
+    opacity: 0;
     transform: translate(-50%, -50%);
+    transition: all .6s;
 
     &.hover {
-        display: block;
+        opacity: 1;
         
     }
     
