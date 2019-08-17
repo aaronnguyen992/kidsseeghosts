@@ -1,41 +1,46 @@
 $ns: '.tracklist';
 
 #{$ns} {
-    position: absolute;
-    top: 65%;
-    left: 50%;
     color: $color-white;
-    font-size: 4rem;
-    opacity: 0;
-    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
     transition: all .6s;
-
-    &.hover {
-        opacity: 1;
-        
-    }
+    font-family: $font-primary;
     
 
-    &__track-title{
+    @include at('tablet') {
+        font-size: 3rem;
+    }
+
+    @include at('desktop') {
+        font-size: 4rem;
+        letter-spacing: 1px;
+        line-height: 7rem;
+        opacity: 0;
+
+        &.hover {
+            opacity: 1;
+        }
+    }
+
+    &__track-title {
         
     }
 
-    &__track-links{
-        display: none;
-        
+    &__track-links {
+        display: none;   
     }
 
-    &__track-spotify{
+    &__track-spotify {
         display: inline;
         margin-right: 3px;
     }
 
-    &__track-apple{
+    &__track-apple {
         display: inline;
         margin-right: 3px;
     }
 
-    &__track-tidal{
+    &__track-tidal {
         display: inline;
         text-transform: uppercase;
         letter-spacing: 1px;

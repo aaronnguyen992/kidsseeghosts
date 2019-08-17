@@ -6,41 +6,101 @@ $ns: '.landing';
     
 
     &__chaos {
-        position: relative;
-        top: 0%;
+        position: absolute;
+        top: 0;
+        left: 0;
         color: $color-red;
-        font-size: 8rem;
+        font-size: 5rem;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         z-index: 5;
-    }
 
-    &__kids-see-ghosts {
-        position: absolute;
-        display: inline-block;
-        top: 40%;
-        left: 50%;
-        color: $color-red;
-        font-size: 10rem;
-        text-align: center;
-        z-index: 5;
-        transform: translate(-50%, -50%); 
-    }
+        @include at('tablet') {
+            font-size: 6rem;
+        }
 
-    &__sometimes {
-        position: absolute;
-        opacity: 0;
-        font-size: 3rem;
-        top: 40%;
-        left: 50%;
-        color: rgba($color-white, .25);
-        transition: all .6s;
-
-        &.hover {
-            opacity: 1;
+        @include at('desktop') {
+            font-size: 8rem;
         }
     }
 
+    &__title {
+        font-family: $font-header;
+        color: $color-red;
+        font-size: 6rem;
+        margin-bottom: 3rem;
+
+        @include at('tablet') {
+            font-size: 8rem;
+        }
+    
+        @include at('desktop') {
+            font-size: 12rem;
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__kids-see-ghosts {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        z-index: 5;
+    }
+
+    &__sometimes {
+
+        @include at('desktop') {
+            font-family: $font-header;
+            font-size: 3rem;
+            color: $color-white;
+            opacity: .7;
+            transition: all .6s;
+            margin-bottom: 2rem;
+
+            &::before {
+                content: 'hover here';
+            }
+
+            &.hover {
+                &::before {
+                    content: 'sometimes';
+                    color: $color-red;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &__streaming-links {
+        position: absolute;
+        bottom: 0;
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 5rem;
+        z-index: 1000005;
+        font-size: 2rem;
+
+        @include at('desktop') {
+            font-size: 3rem;
+        }
+    }
+
+    &__streaming-link {
+        
+        &:hover {
+            color: $color-red;
+        }
+        
+        &:not(:last-child){
+            padding-right: 5rem;
+        }
+    }
 
     &__album {
         position: absolute;
@@ -50,14 +110,13 @@ $ns: '.landing';
         top: 20rem;
         left: 0;
 
-
-        &--blur{
+        &--blur {
             position: relative;
             width: 100%;
             height: 100%;
         }
 
-        &--art{
+        &--art {
             opacity: .7;
         }
 
