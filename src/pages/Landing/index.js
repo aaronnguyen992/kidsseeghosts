@@ -37,7 +37,42 @@ class Landing extends React.Component {
         return (
             <div className="landing">
                 <div className="landing__chaos">混沌</div>
-                <div className="landing__kids-see-ghosts">KIDS SEE GHOSTS <span className={`landing__sometimes ${didHover}`}>sometimes</span></div>
+                <div className="landing__kids-see-ghosts">
+                    <h5 className="landing__title">KIDS SEE GHOSTS</h5>
+                    <span className={`landing__sometimes ${didHover}`}></span>
+                    <div className={`tracklist ${didHover}`}>
+                        {
+                            tracklist.map((track, i) => (
+                                <Tracklist 
+                                    title={track.title}
+                                    feature={track.feature}
+                                    spotify={track.spotify}
+                                    apple={track.apple}
+                                    tidal={track.tidal}
+                                    key={track.title}
+                                    i={i}
+                                />
+                            ))
+                        }
+                    </div>
+                    <div className="landing__streaming-links">
+                        <div className="landing__streaming-link landing__spotify">
+                            <a href="https://open.spotify.com/artist/2hPgGN4uhvXAxiXQBIXOmE?autoplay=true&v=A" target="_blank" rel="noopener noreferrer" >
+                                <i className="fab fa-spotify"></i>
+                            </a>
+                        </div>
+                        <div className="landing__streaming-link landing__apple">
+                            <a href="https://music.apple.com/us/album/kids-see-ghosts/1396710872" target="_blank" rel="noopener noreferrer" >
+                                <i className="fab fa-apple"></i>
+                            </a>
+                        </div>
+                        <div className="landing__streaming-link landing__google">
+                            <a href="https://play.google.com/music/r/m/Bacgttd2il6g3oai5jzjf6vebd4?t=KIDS_SEE_GHOSTS_-_KIDS_SEE_GHOSTS" target="_blank" rel="noopener noreferrer" >
+                                <i class="fab fa-google-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div className="landing__album">
                     <svg className='landing__album--blur' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' width="100%">
                         <image filter='url(#filter2)' width='100%' height='100%' />
@@ -60,21 +95,7 @@ class Landing extends React.Component {
                     </svg>
                 </div>
 
-                <div className={`tracklist ${didHover}`}>
-                {
-                    tracklist.map((track, i) => (
-                        <Tracklist 
-                            title={track.title}
-                            feature={track.feature}
-                            spotify={track.spotify}
-                            apple={track.apple}
-                            tidal={track.tidal}
-                            key={track.title}
-                            i={i}
-                        />
-                    ))
-                }
-                </div>
+                
             </div>
         )
     }
