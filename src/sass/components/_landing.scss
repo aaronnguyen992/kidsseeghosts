@@ -121,4 +121,17 @@ $ns: '.landing';
         }
 
     }
+
+    &__credits {
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        right: 0;
+    }
+
+    &__author {
+        font-family: $font-primary;
+        color: $color-white;
+        font-size: 1.2rem;
+    }
 }
