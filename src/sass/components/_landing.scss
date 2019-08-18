@@ -52,15 +52,19 @@ $ns: '.landing';
     }
 
     &__sometimes {
+        font-family: $font-header;
+        font-size: 3rem;
+        color: $color-white;
+        opacity: .7;
+        transition: all .6s;
+        margin-bottom: 2rem;
+
+        &::before {
+            content: 'click around';
+        }
 
         @include at('desktop') {
-            font-family: $font-header;
-            font-size: 3rem;
-            color: $color-white;
-            opacity: .7;
-            transition: all .6s;
-            margin-bottom: 2rem;
-
+            
             &::before {
                 content: 'hover here';
             }
