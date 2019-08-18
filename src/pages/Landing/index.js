@@ -29,7 +29,6 @@ class Landing extends React.Component {
             mask.setAttribute("cy", (upY - 200));
             mask.setAttribute("cx", (upX));
         })
-        
     }
     render(){
         const didHover = this.state.didHover ? 'hover' : ''
@@ -97,8 +96,6 @@ class Landing extends React.Component {
                         />
                     </svg>
                 </div>
-
-                
             </div>
         )
     }
