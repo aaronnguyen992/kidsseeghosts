@@ -14,7 +14,7 @@ $ns: '.tracklist';
     @include at('desktop') {
         font-size: 4rem;
         letter-spacing: 1px;
-        line-height: 7rem;
+        line-height: 4rem;
         opacity: 0;
 
         &.hover {
